@@ -24,7 +24,8 @@ body {
 }
 /*Gap between header and top of page*/
 #header-div header {
-    margin-top: 15px;
+    padding-top: 15px;
+    padding-bottom: 15px;
 }
 /*Makes all the header elements stay on the same line*/
 #header-div header * {
