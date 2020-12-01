@@ -1,21 +1,33 @@
 /*Removing some default formatting and setting font and background colors*/
-html {
-    background-color: white;
-}
-html *{
+* {
     margin: 0;
     padding: 0;
     font-family: "Comfortaa";
-}
-ul, ol {
+    border: 0;
     list-style-type: none;
+}
+html {
+    background-color: white;
 }
 
 /*Centering the page*/
 body {
     margin:auto;
     max-width: 960px;
-    min-width: 
+}
+/*General styling*/
+section {
+    padding-top:50px;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+h1 {
+    margin-bottom: 10px;
+}
+p {
+    font-size: 13px;
+    margin-top:10px;
+    margin-bottom:10px;
 }
 
 /*Styling the header div on the pages*/
@@ -37,13 +49,13 @@ body {
 /*Sets image properties*/
 #header-div header img {
     width:15%;
-    margin-left: 15%;
+    margin-left: 10%;
     margin-right: 10%;
 }
 /*Spaces out the nav*/
 #header-div header ul {
     display:inline-flex;
-    width:50%;
+    width:55%;
     font-weight: 500;
     justify-content: space-between;
     align-content: center;
@@ -59,17 +71,16 @@ body {
     height: auto;
 }
 /*Curve on bottom of div*/
-#header-div > svg {
+#header-div > svg{
     display:block;
     position: absolute;
     bottom: 0;
 }
 /*Styling top section*/
 #header-div section {
-    padding-top:50px;
-    padding-left:15%;
-    padding-right:10%;
+    padding-bottom: 0px;
 }
+/*Splits section into 2 parts*/
 #header-div section div {
     width:50%;
     display:inline-block;
@@ -81,19 +92,43 @@ body {
     min-height:400px;
     height:100%;
 }
-#header-div section h1 {
-    margin-bottom: 10px;
-}
-#header-div section p {
-    font-size: 13px;
-    margin-top:10px;
-    margin-bottom:10px;
-}
+/*Styling of the contact button*/
 #header-div button {
     background-color: #F2BB05;
-    border: 0;
     color:white;
     padding: 5px 9px 5px 9px;
     border-radius:6px;
     margin-top: 10px;
+}
+
+/*Styling the 'win a website' section*/
+#win_website {
+    background-color: #054A91;
+    min-height: 200px;
+    text-align: center;
+    color:white;
+    position: relative;
+}
+/*Entry Count*/
+#win_website span {
+    color: #F2BB05;
+}
+/*Styling the Email Input Field*/
+/*Hides the label*/
+#website-raffle label {
+    display: none;
+}
+/*Styling of the field container div*/
+#website-raffle div {
+    padding: 5px 9px 5px 9px;
+    border-radius:6px;
+    background-color: white;
+    display:inline-block;
+}
+/*Curve on bottom of section*/
+section > svg {
+    display:block;
+    position:absolute;
+    right: 0;
+    bottom: 0;
 }
