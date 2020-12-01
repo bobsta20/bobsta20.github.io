@@ -102,6 +102,7 @@ p {
 }
 
 /*Styling the 'win a website' section*/
+/*Setting colors and size of this section*/
 #win_website {
     background-color: #054A91;
     min-height: 200px;
@@ -120,10 +121,18 @@ p {
 }
 /*Styling of the field container div*/
 #website-raffle div {
-    padding: 5px 9px 5px 9px;
+    padding: 2px 2px 2px 5px;
     border-radius:6px;
     background-color: white;
     display:inline-block;
+}
+/*Styling of the submit button*/
+#website-raffle input[type="submit"] {
+    background: #F2BB05;
+    color:white;
+    padding: 3px 6px 3px 6px;
+    font-size: 12px;
+    border-radius:6px;
 }
 /*Curve on bottom of section*/
 section > svg {
@@ -131,4 +140,9 @@ section > svg {
     position:absolute;
     right: 0;
     bottom: 0;
+}
+
+/*Styling of the design process section*/
+#design-process h1 {
+    text-align: center;
 }
