@@ -148,14 +148,11 @@ section > svg {
     text-align: center;
 }
 #design-process ol {
-    counter-reset: design-step;
+    position: relative;
 }
-#design-process li {
-    border: 1px solid red;
-    width: 85%;
-    margin: auto;
+.design-slide {
     padding:40px 35px 30px 35px;
-    counter-increment: design-step;
+    box-shadow: 10px 10px 15px #D3D3D3, -10px 0px 15px #D3D3D3;
 }
 #design-process .text-content{
     display:inline-block;
@@ -164,7 +161,6 @@ section > svg {
     margin-right:5%;
 }
 #design-process .text-content h2::before {
-    content: counter(design-step) ". ";
     color:black;
     width:1em;
 }
@@ -175,4 +171,38 @@ section > svg {
 #design-process .image-container img {
     width: 100%;
     height:auto;
+}
+/*Hides the slides initially*/
+.design-slide {
+    display: none;
+}
+/* Fading animation */
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+@keyframes fade {
+    from { opacity: 0; }
+    to {opacity: 1; }
+}
+@-webkit-keyframes fade {
+    from { opacity: 0; }
+    to {opacity: 1; }
+}
+/*Nav arrows*/
+.nav-arrow {
+    cursor: pointer;
+    position: absolute;
+    top:50%;
+    font-size: 30px;
+    color: gray;
+    background-color: transparent;
+}
+#left-nav {
+    left:-25px;
+}
+#right-nav {
+    right:-25px;
 }
