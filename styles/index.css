@@ -206,3 +206,42 @@ section > svg {
 #right-nav {
     right:-25px;
 }
+
+/*Styling the pricing section*/
+#pricing {
+    background-image: url("../images/cost_bg.png");
+    background-size: cover;
+    background-color: #054A91;
+    background-blend-mode: lighten;
+    margin-top:50px;
+    text-align: center;
+    padding-bottom: 25px;
+    padding-top:25px;
+}
+#pricing > h1 {
+    color:white;
+    margin-bottom:15px;
+}
+#pricing > ul {
+    display: flex;
+    width: 65%;
+    margin:auto;
+}
+#pricing > ul > li {
+    justify-content: space-between;
+    margin: 0 20px;
+    background-color: white;
+    border-radius: 20px;
+    padding: 20px;
+}
+#pricing > ul > li > h2 {
+    margin-top:15px;
+}
+#pricing .price {
+    font-size: 18px;
+    margin-top: 43px;
+}
+#pricing .price span {
+    font-size:22px;
+    color: #F2BB05;
+}
