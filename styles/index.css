@@ -13,7 +13,7 @@ html {
 /*Centering the page*/
 body {
     margin:auto;
-    max-width: 960px;
+    max-width: 1200px;
     min-width:600px;
 }
 /*General styling*/
@@ -244,4 +244,23 @@ section > svg {
 #pricing .price span {
     font-size:22px;
     color: #F2BB05;
+}
+
+/*Styling of the contact-us section*/
+#contact-us {
+    text-align: center;
+}
+
+/*Styling of the footer*/
+footer {
+    background-color: black;
+    color: white;
+    padding: 50px 20%;
+}
+footer > div {
+    display:inline-block;
+    margin: 0px 15px;
+}
+footer div:first-child ul li {
+    display:inline;
 }
