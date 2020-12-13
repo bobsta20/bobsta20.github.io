@@ -1,5 +1,17 @@
 var slideIndex = 1;
+var menuShown = false;
 showSlides(slideIndex);
+const screenEnlarge = window.matchMedia('(min-width: 701px)');
+const screenShrink = window.matchMedia('(max-width: 700px)');
+screenEnlarge.addEventListener('change', function() {
+    if (screenEnlarge.matches) {
+        document.getElementById("main-nav").style.display = "inline-flex";
+        menuShown = false;
+    }
+    if (screenShrink.matches) {
+        document.getElementById("main-nav").style.display = "none";
+    }
+});
 
 document.getElementById("left-nav").addEventListener("click", function() {
     plusSlides(-1);
@@ -7,6 +19,17 @@ document.getElementById("left-nav").addEventListener("click", function() {
 document.getElementById("right-nav").addEventListener("click", function() {
     plusSlides(1);
 });
+
+function toggleMenu() {
+    nav = document.getElementById("main-nav");
+    if(menuShown) {
+        nav.style.display = "none";
+        menuShown = false;
+    } else {
+        nav.style.display = "block";
+        menuShown = true;
+    }
+}
 
 function plusSlides(n) {
     showSlides(slideIndex+=n);

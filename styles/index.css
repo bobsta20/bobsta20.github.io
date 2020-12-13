@@ -30,6 +30,10 @@ p {
     margin-top:10px;
     margin-bottom:10px;
 }
+a {
+    text-decoration: none;
+    color:inherit;
+}
 
 /*Styling the header div on the pages*/
 /*Adds the gradient*/
@@ -42,6 +46,7 @@ p {
 #header-div header {
     padding-top: 15px;
     padding-bottom: 15px;
+    position: relative;
 }
 /*Makes all the header elements stay on the same line*/
 #header-div header * {
@@ -60,6 +65,9 @@ p {
     font-weight: 500;
     justify-content: space-between;
     align-content: center;
+}
+#header-div #menu_icon {
+    display:none;
 }
 /*The big penguin image*/
 #header-div section img {
@@ -263,4 +271,61 @@ footer > div {
 }
 footer div:first-child ul li {
     display:inline;
+}
+
+@media screen and (max-width: 700px) {
+    /*Lowers body min-width*/
+    body {
+        min-width:200px;
+    }
+    /*Styles the nav menu*/
+    #header-div header img {
+        width:200px;
+        margin-left:30px;
+    }
+    #header-div header ul {
+        display: none;
+        background-color: #054A91;
+        width:85%;
+        position:absolute;
+        left:0;
+        top: 70px;
+        text-align: center;
+    }
+    #header-div header ul * {
+        display: block;
+        padding: 8px 10px;
+    }
+    #header-div #menu_icon {
+        display: initial;
+        margin-right:30px;
+        width: 50px;
+        float:right;
+    }
+}
+@media screen and (min-width: 701px) {
+    /*resets all the styles for full screen width*/
+    body {
+        min-width: 600px;
+    }
+    #header-div header img {
+        width: 15%;
+        margin-left: 10%;
+    }
+    #header-div header ul {
+        display: inline-flex;
+        width: 55%;
+        position: initial;
+        left: auto;
+        top: auto;
+        background-color: initial;
+        text-align: inherit;
+    }
+    #header-div header ul * {
+        display:inline-block;
+        padding: 0;
+    }
+    #header-div #menu-icon {
+        display: none;
+    }
 }
