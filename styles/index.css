@@ -232,12 +232,12 @@ section > svg {
 }
 #pricing > ul {
     display: flex;
-    width: 65%;
+    width: 80%;
     margin:auto;
 }
 #pricing > ul > li {
     justify-content: space-between;
-    margin: 0 20px;
+    margin: 0 5%;
     background-color: white;
     border-radius: 20px;
     padding: 20px;
@@ -273,6 +273,7 @@ footer div:first-child ul li {
     display:inline;
 }
 
+/*Nav styling when the screen shrinks*/
 @media screen and (max-width: 700px) {
     /*Lowers body min-width*/
     body {
@@ -303,29 +304,15 @@ footer div:first-child ul li {
         float:right;
     }
 }
-@media screen and (min-width: 701px) {
-    /*resets all the styles for full screen width*/
-    body {
-        min-width: 600px;
+
+/*Pricing styling when the screen size shrinks*/
+@media screen and (max-width: 770px) {
+    #pricing > ul {
+        display: initial;
     }
-    #header-div header img {
-        width: 15%;
-        margin-left: 10%;
-    }
-    #header-div header ul {
-        display: inline-flex;
-        width: 55%;
-        position: initial;
-        left: auto;
-        top: auto;
-        background-color: initial;
-        text-align: inherit;
-    }
-    #header-div header ul * {
-        display:inline-block;
-        padding: 0;
-    }
-    #header-div #menu-icon {
-        display: none;
+    #pricing > ul > li {
+        width: 240px;
+        margin:auto;
+        margin-bottom: 20px;
     }
 }

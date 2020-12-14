@@ -3,7 +3,9 @@ var menuShown = false;
 showSlides(slideIndex);
 const screenEnlarge = window.matchMedia('(min-width: 701px)');
 const screenShrink = window.matchMedia('(max-width: 700px)');
-screenEnlarge.addEventListener('change', function() {
+screenEnlarge.addEventListener('change', screenSizeChange);
+
+function screenSizeChange() {
     if (screenEnlarge.matches) {
         document.getElementById("main-nav").style.display = "inline-flex";
         menuShown = false;
@@ -11,7 +13,7 @@ screenEnlarge.addEventListener('change', function() {
     if (screenShrink.matches) {
         document.getElementById("main-nav").style.display = "none";
     }
-});
+}
 
 document.getElementById("left-nav").addEventListener("click", function() {
     plusSlides(-1);
